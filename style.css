@@ -31,6 +31,7 @@ html{
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    z-index: 200;
 }
 
 .show-menu .hamburguer{
@@ -80,7 +81,7 @@ header{
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
-    animation: zoom 25s;
+    animation: zoom 15s;
 }
 @keyframes zoom{
     0%{
@@ -106,7 +107,7 @@ header{
     line-height: 3.5rem;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 1s 0.7s forwards;
+    animation: moveBanner 1s 0.5s forwards;
 }
 
 .banner p{
@@ -116,7 +117,7 @@ header{
     text-shadow: .2rem .1rem rgba(0,0,0.4);
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 1s 0.5s forwards;
+    animation: moveBanner 1s 1s forwards;
 }
 
 .banner button{
@@ -132,7 +133,7 @@ header{
     border-radius: 10px;
     cursor: pointer;
     opacity: 0;
-    animation: moveBanner 1s 0.9s forwards;
+    animation: moveBanner 1s 1.5s forwards;
 }
 .banner button:hover{
     color: rgba(255, 255, 255, 0.459);
@@ -206,7 +207,7 @@ header{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: background-color 1s;
+    transition: background-color 0.7s;
 }
 .social-media i:hover{
     background-color: #a044ff;
@@ -288,17 +289,6 @@ header{
     margin-top: 1rem;
 }
 
-.conhecimentos-img-wrapper{
-    grid-column: 7 / 11;
-    grid-row: 2 / 6;
-    width: 100%;
-}
-
-.conhecimentos-img-wrapper img{
-    object-fit: cover;
-    width: 100%;
-}
-
 
 
 
@@ -307,12 +297,13 @@ header{
 .projetos{
     display: flex;
     justify-content: space-evenly;
+    height: 35rem;
 }
 
 .card{
     position: relative;
     width: 18rem;
-    height: 25rem;
+    height: 80%;
 }
 
 .card-img-wrapper{
@@ -361,6 +352,7 @@ header{
     color: #eee;
     font-weight: 400;
     width: 80%;
+    margin-bottom: 20px;
 }
 
 .btn{
@@ -373,6 +365,7 @@ header{
     border-radius: .5rem;
     border: none;
     box-shadow: 0 .1rem .8rem rgba(0,0,0, 0.4);
+    cursor: pointer;
 }
 
 .card-info button{
@@ -467,10 +460,6 @@ header{
     text-transform: uppercase;
     transition: all 0.3;
 }
-.field:focus ~ label{
-    top: 0;
-    font-size: 1rem;
-}
 
 .field:focus{
     border-bottom: 1px solid;
@@ -482,77 +471,6 @@ header{
     width: 100%;
     height: 2rem;
     margin-top: 1rem;
-}
-
-
-
-
-
-/*SESSÃO ORÇAMENTO*/
-.sessao-orcamento{
-    width: 100%;
-    height: 100vh;
-    background: url();
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.orcamento-wrapper{
-    width: 100%;
-    height: 80%;
-    background-color: #ffffff99;
-    border-radius: 10px;
-    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0, 0.5);
-    position: relative;
-}
-
-.sessao-orcamento h1{
-    position: absolute;
-    top: -2.5rem;
-    left: 2rem;
-    background: #8E2DE2; 
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
-    padding: 0 3rem;
-    color: #fff;
-    font-family: var(--font-primary);
-    font-size: 3rem;
-    font-weight: lighter;
-    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0, 0.5);
-    border-radius: 10px;
-}
-
-.sessao-orcamento form{
-    margin: 4rem;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
-
-.sessao-orcamento label{
-    font-family: var(--font-secondary);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.sessao-orcamento input[type="number"]{
-    font-family: var(--font-secondary);
-    width: 4rem;
-    font-size: 2rem;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding: 0.3rem;
-}
-
-.btn-orcamento{
-    text-transform: uppercase;
-    padding: 1rem;
-    cursor: pointer;
-    grid-column: 2;
 }
 
 
